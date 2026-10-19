@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket клиент</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Обновления в реальном времени</h1>
+
+        <p>Статус: <span id="status">Не подключено</span></p>
+
+        <div class="buttons">
+            <button id="connectButton">Подключиться</button>
+            <button id="disconnectButton" disabled>Отключиться</button>
+        </div>
+
+        <form id="messageForm">
+            <input id="messageInput" type="text" placeholder="У нас нет Вебсток сервера, писать некуда">
+            <button type="submit">Отправить</button>
+        </form>
+
+        <h2>Сообщения</h2>
+        <ul id="messageList"></ul>
+    </main>
+</body>
+</html>
