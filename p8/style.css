@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff90eb 0%, #e46dad 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.accordion-item {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+    border-color: #ee8ff9;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.accordion-item.active {
+    border-color: #ff97e9;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+.accordion-header {
+    width: 100%;
+    background: #f8f9fa;
+    border: none;
+    padding: 20px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: #ad5c8a;
+    color: #fff;
+}
+
+.accordion-item.active .accordion-header {
+    background: #ea66c5;
+    color: #fff;
+}
+
+.accordion-icon {
+    font-size: 1.5em;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    min-width: 24px;
+    text-align: center;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: #fff;
+}
+
+.accordion-content p {
+    padding: 0 25px;
+    color: #555;
+    line-height: 1.7;
+    font-size: 1em;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 500px;
+    padding: 20px 0;
+}
